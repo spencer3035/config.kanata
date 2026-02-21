@@ -1,0 +1,98 @@
+(defcfg
+  process-unmapped-keys no
+)
+;; Only one defsrc is allowed.
+;;
+;; defsrc defines the keys that will be intercepted by kanata. The order of the
+;; keys matches with deflayer declarations and all deflayer declarations must
+;; have the same number of keys as defsrc. Any keys not listed in defsrc will
+;; be passed straight to the operating system.
+(defsrc
+    ;; Main Qwerty keyboard
+    esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
+    grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    caps a    s    d    f    g    h    j    k    l    ;    '         ret
+    lsft z    x    c    v    b    n    m    ,    .    /              rsft
+    lctl lmet lalt             spc               ralt rctl rmet      menu
+
+    ;; Navigation keys
+               ArrowUp
+    ArrowLeft  ArrowDown  ArrowRight
+    home    pgup    pgdn    end
+
+    ;; Numpad
+    nlck kp/  kp* kp-
+    kp7  kp8  kp9 kp+
+    kp4  kp5  kp6
+    kp1  kp2  kp3 kprt
+    kp0  kp.
+)
+
+;; Default layer (because it is the first defined)
+(deflayer base
+    ;; Main Qwerty keyboard
+    esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
+    grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    @to2 a    s    d    @mfC g    h    j    k    l    ;    '         ret
+    lsft z    x    c    v    b    n    m    ,    .    /              rsft
+    lctl lmet lalt             spc               ralt rctl rmet      menu
+
+    ;; Navigation keys
+               ArrowUp
+    ArrowLeft  ArrowDown  ArrowRight
+    home    pgup    pgdn    end
+
+    ;; Numpad
+    nlck kp/  kp* kp-
+    kp7  kp8  kp9 kp+
+    kp4  kp5  kp6
+    kp1  kp2  kp3 kprt
+    kp0  kp.
+)
+
+;; Alternative keyboard layout
+(deflayer alternative
+    ;; Main keyboard
+    esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
+    grv  1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+    tab  b    l    d    w    z    -    f    o    u    j    =    '    \
+    @to1 n    r    t    s    g    y    h    a    e    i    ;         ret
+    lsft q    x    m    c    v    k    p    ,    .    /              rsft
+    lctl lmet lalt             spc               ralt rctl rmet      menu
+
+    ;; Navigation keys
+               ArrowUp
+    ArrowLeft  ArrowDown  ArrowRight
+    home    pgup    pgdn    end
+
+    ;; Numpad
+    nlck kp/  kp* kp-
+    kp7  kp8  kp9 kp+
+    kp4  kp5  kp6
+    kp1  kp2  kp3 kprt
+    kp0  kp.
+)
+
+(defvar
+  ;; Tap timeout in ms
+  tap-timeout   100
+  ;; Time until hold action is taken
+  hold-timeout  200
+
+  ;; Shorter aliases for above
+  tt $tap-timeout
+  ht $hold-timeout
+)
+
+
+;; Aliases
+(defalias
+  ;; Layer switches
+  to1 (layer-switch base)
+  to2 (layer-switch alternative)
+
+  ;; Home row mods
+  mfC (tap-hold-release $tt $ht f lctl)
+)
