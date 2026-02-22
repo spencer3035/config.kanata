@@ -35,9 +35,9 @@
     esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
     grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-    @to2 a    s    d    @mfC g    h    j    k    l    ;    '         ret
+    @to2 a    s    d    @fC  g    h    @jC  k    l    ;    '         ret
     lsft z    x    c    v    b    n    m    ,    .    /              rsft
-    lctl lmet lalt             spc               ralt rctl rmet      menu
+    XX   lmet lalt             spc               ralt XX   rmet      menu
 
     ;; Navigation keys
                ArrowUp
@@ -58,9 +58,9 @@
     esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
     grv  1    2    3    4    5    6    7    8    9    0    [    ]    bspc
     tab  b    l    d    w    z    -    f    o    u    j    =    '    \
-    @to1 n    r    t    s    g    y    h    a    e    i    ;         ret
+    @to1 n    r    t    @sC  g    y    @hC  a    e    i    ;         ret
     lsft q    x    m    c    v    k    p    ,    .    /              rsft
-    lctl lmet lalt             spc               ralt rctl rmet      menu
+    XX   lmet lalt             spc               ralt XX   rmet      menu
 
     ;; Navigation keys
                ArrowUp
@@ -94,5 +94,8 @@
   to2 (layer-switch alternative)
 
   ;; Home row mods
-  mfC (tap-hold-release $tt $ht f lctl)
+  fC (tap-hold-release $tt $ht f lctl)
+  jC (tap-hold-release $tt $ht j rctl)
+  sC (tap-hold-release $tt $ht s lctl)
+  hC (tap-hold-release $tt $ht h rctl)
 )
