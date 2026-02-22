@@ -57,9 +57,9 @@
     ;; Main keyboard
     esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
     grv  1    2    3    4    5    6    7    8    9    0    [    ]    bspc
-    tab  b    l    d    w    z    -    f    o    u    j    =    '    \
+    tab  b    l    d    c    v    -    f    o    u    j    =    '    \
     @to1 n    r    t    @sC  g    y    @hC  a    e    i    ;         ret
-    lsft q    x    m    c    v    k    p    ,    .    /              rsft
+    lsft q    x    m    w    z    k    p    ,    .    /              rsft
     XX   lmet lalt             spc               ralt XX   rmet      menu
 
     ;; Navigation keys
