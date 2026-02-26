@@ -77,9 +77,9 @@
 
 (defvar
   ;; Tap timeout in ms
-  tap-timeout   100
+  tap-timeout   200
   ;; Time until hold action is taken
-  hold-timeout  200
+  hold-timeout  400
 
   ;; Shorter aliases for above
   tt $tap-timeout
