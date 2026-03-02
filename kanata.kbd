@@ -35,7 +35,7 @@
     esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
     grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-    @to2 a    s    d    @fC  g    h    @jC  k    l    ;    '         ret
+    @to2 a    @sA  @dM  @fC  g    h    @jC  @kM  @lA  ;    '         ret
     lsft z    x    c    v    b    n    m    ,    .    /              rsft
     XX   lmet lalt             spc               ralt XX   rmet      menu
 
@@ -58,7 +58,7 @@
     esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
     grv  1    2    3    4    5    6    7    8    9    0    [    ]    bspc
     tab  b    l    d    c    z    -    f    o    u    j    =    '    \
-    @to1 n    r    t    @sC  g    y    @hC  a    e    i    ;         ret
+    @to1 n    @rA  @tM  @sC  g    y    @hC  @aM  @eA  i    ;         ret
     lsft q    x    m    w    v    k    p    ,    .    /              rsft
     XX   lmet lalt             @spSft            ralt XX   rmet      menu
 
@@ -93,10 +93,24 @@
   to1 (layer-switch base)
   to2 (layer-switch alternative)
 
-  ;; Home row mods
+  ;; Home row mods QWERTY
+  sA (tap-hold-release $tt $ht s lalt)
+  dM (tap-hold-release $tt $ht d lmet)
   fC (tap-hold-release $tt $ht f lctl)
+
   jC (tap-hold-release $tt $ht j rctl)
+  kM (tap-hold-release $tt $ht k rmet)
+  lA (tap-hold-release $tt $ht l ralt)
+
+  ;; Home row mods graphite
+  rA (tap-hold-release $tt $ht r lalt)
+  tM (tap-hold-release $tt $ht t lmet)
   sC (tap-hold-release $tt $ht s lctl)
+
   hC (tap-hold-release $tt $ht h rctl)
+  aM (tap-hold-release $tt $ht a rmet)
+  eA (tap-hold-release $tt $ht e ralt)
+
+  ;; Shift space
   spSft (tap-hold-release $tt $ht spc lsft)
 )
