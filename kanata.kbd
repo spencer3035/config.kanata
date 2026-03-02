@@ -60,7 +60,7 @@
     tab  b    l    d    c    z    -    f    o    u    j    =    '    \
     @to1 n    r    t    @sC  g    y    @hC  a    e    i    ;         ret
     lsft q    x    m    w    v    k    p    ,    .    /              rsft
-    XX   lmet lalt             spc               ralt XX   rmet      menu
+    XX   lmet lalt             @spSft            ralt XX   rmet      menu
 
     ;; Navigation keys
                ArrowUp
@@ -98,4 +98,5 @@
   jC (tap-hold-release $tt $ht j rctl)
   sC (tap-hold-release $tt $ht s lctl)
   hC (tap-hold-release $tt $ht h rctl)
+  spSft (tap-hold-release $tt $ht spc lsft)
 )
