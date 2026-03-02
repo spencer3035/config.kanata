@@ -37,7 +37,7 @@
     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
     @to2 a    @sA  @dM  @fC  g    h    @jC  @kM  @lA  ;    '         ret
     lsft z    x    c    v    b    n    m    ,    .    /              rsft
-    XX   lmet lalt             spc               ralt XX   rmet      menu
+    XX   lmet lalt             @spSft            ralt XX   rmet      menu
 
     ;; Navigation keys
                ArrowUp
